@@ -30,9 +30,9 @@
 
    Clone your fork to your machine.
 
-3. Go to the `labs/lab3/Code/` folder.
+3. Go to the `<name_of_your_fork>/labs/lab3/Code/` folder.
    ```sh
-   cd labs/lab3/Code/
+   cd <name_of_your_fork>/labs/lab3/Code/
    ```
 
 4. Install all dependencies:
