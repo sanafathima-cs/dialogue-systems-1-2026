@@ -280,8 +280,20 @@ const dmMachine = setup({
   },
 });
 
+// ---------------- INSPECTOR ----------------
+import { createBrowserInspector } from "@statelyai/inspect";
+
+const inspector = createBrowserInspector({
+  autoStart: true, // automatically starts inspector, no popup needed
+});
+
 // ---------------- ACTOR ----------------
-export const dmActor = createActor(dmMachine).start();
+export const dmActor = createActor(dmMachine, {
+  inspect: inspector.inspect,
+
+});
+
+dmActor.start();
 
 // ---------------- BUTTON ----------------
 export function setupButton(button: HTMLButtonElement) {
